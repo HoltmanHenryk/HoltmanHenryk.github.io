@@ -1,0 +1,242 @@
+:root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --link-color: #3b82f6;
+    --border-color: #333333;
+    --font-family: serif;
+}
+
+.light-theme {
+    --bg-color: #f4f4f4;
+    --text-color: #1a1a1a;
+    --link-color: #1d4ed8;
+    --border-color: #cccccc;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.theme-btn {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.nav-container {
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.nav-btn:hover {
+    text-decoration: underline;
+}
+
+.nav-btn.active {
+    color: var(--text-color);
+    font-weight: bold;
+    border-bottom: 2px solid var(--text-color);
+}
+
+.main-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-section {
+    display: none; 
+}
+
+.page-section.active {
+    display: block; 
+}
+
+.profile-layout {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.profile-left {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-img-container {
+    border: 1px solid var(--border-color);
+    padding: 5px;
+    display: inline-block;
+    background-color: #000000;
+    margin-bottom: 15px;
+}
+
+.profile-img {
+    display: block;
+    max-width: 240px;
+    height: auto;
+}
+
+.profile-right {
+    flex: 1.5;
+}
+
+.info-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.info-item {
+    margin-bottom: 35px;
+}
+
+.project-link {
+    color: var(--link-color);
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.social-links a, .other-projects a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.social-links a:hover, .other-projects a:hover {
+    text-decoration: underline;
+}
+
+.other-projects {
+    margin-top: 15px;
+}
+
+.contact-form {
+    text-align: left;
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    background-color: transparent;
+    color: var(--text-color);
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.submit-btn {
+    background: none;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.submit-btn:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-alert {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.form-alert.success { border-color: #22c55e; color: #22c55e; }
+.form-alert.error { border-color: #ef4444; color: #ef4444; }
+.hidden { display: none; }
+
+@media (max-width: 768px) {
+    .profile-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 45px;
+        background-color: var(--bg-color);
+        border: 1px solid var(--border-color);
+        padding: 10px;
+        width: 160px;
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}

@@ -1,12 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="refresh" content="0; url=https://leaomartelo2.github.io/" />
-    </head>
-    <body>
-    
-    
-    </body>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henryk Szenkowicz Holtman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+
+    <header class="main-header">
+        <button id="theme-toggle" class="theme-btn">Mudar Tema</button>
+        <nav class="nav-container">
+            <ul class="nav-links">
+                <li><button class="nav-btn active" data-target="sobre">Sobre Mim</button></li>
+                <li><button class="nav-btn" data-target="formacao">Formação</button></li>
+                <li><button class="nav-btn" data-target="portfolio">Portfólio</button></li>
+                <li><button class="nav-btn" data-target="contato">Contato</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+
+        <!-- sobre mim -->
+        <section id="sobre" class="page-section active">
+            <div class="profile-layout">
+                <div class="profile-left">
+                    <h1>Henryk Szenkowicz Holtman</h1>
+                    <div class="profile-img-container">
+                        <img src="images/expose.jpg" class="profile-img">
+                    </div>
+                    <div class="social-links">
+                        <p>Links:</p>
+                        <a href="https://www.linkedin.com/in/henryk-holtman" target="_blank">LinkedIn</a> 
+                        <br>
+                        <a href="https://github.com/leaomartelo2" target="_blank">GitHub pessoal</a>
+                        <br>
+                        <a href="https://github.com/holtmanhenryk" target="_blank">GitHub alternativo</a>
+                    </div>
+                </div>
+                <div class="profile-right">
+                    <h2>Sobre mim:</h2>
+                    <p>Nascido em Paraná - BR</p>
+                    <p>Hobbies: Linguagem C, Game-dev, POSIX / Unix-like systems e low-level em geral.</p>
+                    <br><br><br>
+<img width=300px src="https://github-readme-stats-leaomartelo2s-projects.vercel.app/api/top-langs/?theme=github_dark&username=leaomartelo2&layout=compact&langs_count=20&exclude_repo=github-readme-stats">
+                </div>
+            </div>
+        </section>
+
+        <!-- formacao -->
+        <section id="formacao" class="page-section">
+            <div class="info-content">
+                <h2>Formação Acadêmica:</h2>
+                <div class="info-item">
+                    <h3>Cursando</h3>
+                    <p>Bacharelado em ciência da computação - Uninter</p>
+                </div>
+
+                <h2>Idiomas:</h2>
+                <div class="info-item">
+                    <p>Português (Nativo) </p>
+                    <p>Inglês (Avançado) </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- restos mortais o algo-->
+        <section id="portfolio" class="page-section">
+            <div class="info-content">
+                <h2>Meus projetos principais:</h2>
+                <div class="info-item">
+                    <a href="https://github.com/LeaoMartelo2/virtual_machine" target="_blank" class="project-link">VMASM assembly</a>
+                    <p>Pequena linguagem tipo assembly que é compilada e roda no propio interpretador</p>
+                </div>
+                <div class="info-item">
+                    <a href="https://github.com/LeaoMartelo2/wireframe_game" target="_blank" class="project-link">Wireframe Game</a>
+                    <p>Desenvolvimento de uma Engine/Jogo montado em topo Raylib</p>
+                </div>
+                <div class="info-item">
+                    <a href="https://github.com/LeaoMartelo2/c2html" target="_blank" class="project-link">c2html</a>
+                    <p>Gerador de página estatica de html em C</p>
+                </div>
+                <div class="info-item">
+                    <a href="https://github.com/LeaoMartelo2/ts_runner" target="_blank" class="project-link">ts_runner.h</a>
+                    <p>Biblioteca estilo header-only para implementar test-suites em C</p>
+                </div>
+
+                <h2>Outros projetos menores:</h2>
+                <div class="other-projects">
+                    <a href="https://github.com/LeaoMartelo2/DiscordFix" target="_blank">DiscordFix</a> - 
+                    <a href="https://github.com/LeaoMartelo2/LogNest" target="_blank">lognest.h</a> - 
+                    <a href="https://github.com/LeaoMartelo2/raylib-fps-demo" target="_blank">Demonstração movimentação e colisão 3D estilo quake</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- contato -->
+        <section id="contato" class="page-section">
+            <div class="info-content">
+                <h2>Contato:</h2>
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                </form>
+                <div id="form-message" class="form-alert hidden"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
